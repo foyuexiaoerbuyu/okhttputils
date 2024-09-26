@@ -3,12 +3,12 @@ apply plugin: 'com.novoda.bintray-release'//添加
 
 
 android {
-    compileSdkVersion 23
+    compileSdkVersion 33
     buildToolsVersion "23.0.1"
 
     defaultConfig {
         minSdkVersion 9
-        targetSdkVersion 23
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
     }
@@ -21,6 +21,10 @@ android {
     lintOptions{
         abortOnError false
         warning 'InvalidPackage'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
 }
